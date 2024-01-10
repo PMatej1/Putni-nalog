@@ -1,0 +1,88 @@
+/* public/styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0;
+
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: aqua;
+  box-sizing: border-box;
+}
+nav ul{
+  text-transform: uppercase;
+  list-style: none;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+form{
+  width:45%;
+
+}
+.forme {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.tabela{
+  width: 100%;
+  border: 1px solid;
+  border-spacing: 0;
+}
+.tabela thead{
+  border-bottom: 2px solid #dddddd;
+}
+.tabela th {
+  border-bottom: 2px solid wheat;
+  padding-top: 10px;
+  color: wheat;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+.tabela td {
+  border: 0;
+  padding: 5px;
+
+}
+.tabela tr {
+  text-align: center;
+  border: 0;
+}
+.tabela tr:nth-child(odd) {
+  background-color:cadetblue ;
+}

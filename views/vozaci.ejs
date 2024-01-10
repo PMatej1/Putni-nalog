@@ -1,0 +1,66 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putni nalog</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<div>
+
+    <table class="tabela">
+        <thead>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Datum isteka licence</th>
+        <th>Datum isteka dozvole</th>
+        <th>Aktivan</th>
+        <th >Brisanje</th>
+        </thead>
+        <tbody>
+
+        <% if (podaciSvi.length>0) { %>
+            <% podaciSvi.map((podatak, index) => { %>
+            <tr>
+                <td><%=podatak.ime%></td>
+                <td><%=podatak.prezime%></td>
+                <td><%=podatak.datum_isteka_licence%></td>
+                <td><%=podatak.datum_isteka_dozvole%></td>
+                <td><%=podatak.aktivan%></td>
+                <td><a href=<%="/obrisiVozaca/"+podatak.id_vozaca%>>Obrisi </a> </td>
+
+            </tr>
+
+
+            <% }) %>
+
+        <% } else { %>
+            <tr>
+                <td colspan="5">No data available.
+                </td>
+            </tr>
+
+        <% } %>
+        </tbody>
+    </table>
+<form action="/dodajVozaca" method="post">
+    <label> Ime</label>
+    <input type="text" name="ime" required>
+    <label> Prezime</label>
+    <input type="text" name="prezime" required>
+    <label> Datum isteka licence</label>
+    <input type="date" name="datum1" required>
+    <label> Datum isteka dozvole</label>
+    <input type="date" name="datum2" required>
+    <label> Aktivan</label>
+    <input type="number" name="aktivan" required>
+    <button type="submit"> Dodaj vozaca</button>
+
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putni nalog</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<div>
+
+    <table class="tabela">
+        <thead>
+        <th>Garazni broj</th>
+        <th>Broj registracije</th>
+        <th>Naziv marke</th>
+        <th>Najveca udaljenost</th>
+        <th>Najduza relacija</th>
+        </thead>
+        <tbody>
+
+    <% if (podaciSvi.length>0) { %>
+        <% podaciSvi.map((podatak, index) => { %>
+            <tr>
+                <td><%=podatak.garazni_broj%></td>
+                <td><%=podatak.registracija%></td>
+                <td><%=podatak.naziv_marke%></td>
+                <td><%=podatak.najveca_udaljenost%></td>
+                <td><%=podatak.najduza_relacija%></td>
+            </tr>
+
+        <% }) %>
+
+    <% } else { %>
+    <tr>
+<td colspan="5">No data available.
+</td>
+    </tr>
+
+    <% } %>
+    </tbody>
+    </table>
+
+</div>
+<script src="/javascripts/script.js"></script>
+</body>
+</html>

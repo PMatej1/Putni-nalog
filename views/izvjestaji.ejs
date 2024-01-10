@@ -1,0 +1,124 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putni nalog</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body class="forme">
+
+<form id="itemForm" action="/naloziPoLinijama" method="post">
+    <h1>Nalozi po linijama</h1>
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <button type="submit"> Putni nalozi po linijama</button>
+</form>
+
+
+<form id="itemForm" action="/brojVozaca" method="post">
+    <h1>Broj vozaca</h1>
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum 2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <button type="submit"> Broj vozača</button>
+</form>
+
+<form id="itemForm" action="/vozaciKojiNisuVozili" method="post">
+    <h1>Vozaci koji nisu vozili</h1>
+
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum 2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <button type="submit"> Broj vozača koji nisu vozili u periodu</button>
+</form>
+
+<form id="itemForm" action="/brojRazlicitihLinijaVozaca" method="post">
+    <h1>Broj razlicitih linija po vozacu</h1>
+
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum 2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <button type="submit"> Broj razlicitih linija vozaca</button>
+</form>
+
+<form id="itemForm" action="/uporedniIzvjestaj" method="post">
+    <h1>Uporedni izvjestaj</h1>
+
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum 2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <label for="itemName">Datum3:</label>
+    <input type="date" name="datum3" id="datum3" required>
+
+    <label for="Datum4">Datum 4:</label>
+    <input type="date" name="datum4" id="datum4" required>
+
+    <button type="submit"> Uporedni izvjestaj</button>
+</form>
+
+<form id="itemForm" action="/brojVoznjiPoVozilu" method="post">
+    <h1>Broj voznji po vozilu</h1>
+
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <label for="Sort">Sortirati po</label>
+    <select name="sort">
+        <option value="1"> Garaznom broju</option>
+        <option value="2"> Registraciji</option>
+        <option value="3"> Vozilu</option>
+    </select>
+    <br><br>
+
+    <button type="submit"> Broj voznji po vozilu</button>
+
+</form>
+<form id="itemForm" action="/NajduzeVoznjePoVozilu" method="post">
+    <h1>Najduze voznje po vozilu</h1>
+
+    <label for="itemName">Datum1:</label>
+    <input type="date" name="datum1" id="datum1" required>
+
+    <label for="Datum2">Datum2:</label>
+    <input type="date" name="datum2" id="datum2" required>
+
+    <label for="Sort">Sortirati po</label>
+    <select name="sort">
+        <option value="1"> Garaznom broju</option>
+        <option value="2"> Registraciji</option>
+        <option value="3"> Vozilu</option>
+    </select>
+    <br><br>
+
+    <button type="submit"> Najduze voznje po vozilu</button>
+
+</form>
+
+<ul id="itemList"></ul>
+
+
+</body>
+</html>
+

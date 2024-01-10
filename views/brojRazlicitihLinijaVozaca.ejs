@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<div>
+    <table class="tabela">
+        <thead>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Broj obavljenih linija</th>
+        </thead>
+        <tbody>
+
+        <% if (podaciSvi.length>0) { %>
+            <% podaciSvi.map((podatak, index) => { %>
+            <tr>
+                <td><%=podatak.ime%></td>
+                <td><%=podatak.prezime%></td>
+                <td><%=podatak.broj_razlicitih_linija%></td>
+
+            </tr>
+
+            <% }) %>
+
+        <% } else { %>
+            <tr>
+                <td colspan="5">No data available.
+                </td>
+            </tr>
+
+        <% } %>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

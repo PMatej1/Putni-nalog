@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putni nalog</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<div>
+    <table class="tabela">
+        <thead>
+        <th>Naziv linije</th>
+        <th>Broj obavljenih prolazaka u periodu 1</th>
+        <th>Broj obavljenih prolazaka u periodu 2</th>
+        </thead>
+        <tbody>
+
+        <% if (podaciSvi.length>0) { %>
+            <% podaciSvi.map((podatak, index) => { %>
+            <tr>
+                <td><%=podatak.naziv_linije%></td>
+                <td><%=podatak.broj_obavljenih_polazaka_1%></td>
+                <td><%=podatak.broj_obavljenih_polazaka_2%></td>
+
+            </tr>
+
+            <% }) %>
+
+        <% } else { %>
+            <tr>
+                <td colspan="5">No data available.
+                </td>
+            </tr>
+
+        <% } %>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

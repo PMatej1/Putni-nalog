@@ -1,0 +1,32 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Putni nalog</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<%- include("./navbar.ejs")%>
+<div class="forme">
+<form id="itemForm" action="/putniNalog" method="post">
+  <h1 style="text-align: center;"> Detalji putnog naloga</h1>
+
+  <label for="itemName">ID:</label>
+  <input type="number" name="id" id="id" required>
+  <button type="submit"> JSON putnog naloga</button>
+</form>
+
+<form id="itemForm" action="/JSONVozac" method="post">
+  <h1 > Vozaci </h1>
+
+  <label for="itemName">ID:</label>
+  <input type="number" name="id" id="id" required>
+  <button type="submit"> Vozac </button>
+</form>
+</div>
+</body>
+</html>
+
